@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+{% load static %}
+<div class="jumbotron">
+    <h1> House Price Prediction </h1>
+    <div class="fieldWrapper">
+      <h2>For the values</h2>
+      <p>Enter Area (sq ft):{{data_ar}}</p>
+      <p>Enter number of Bedrooms:{{data_bed}}</p>
+      <p>Enter number of Bathrooms:{{data_bath}}</p>
+      <p>Enter number of Floors:{{data_flr}}</p>
+      <p>Enter Year Built:{{data_yblt}}</p>
+      <p>Enter Location (Downtown:1/Suburban:2/Urban:3/Rural:4):{{data_loc}}</p>
+      <p>Enter Condition (Excellent:1/Good:2/Fair:3/Poor:4):{{data_con}}</p>
+      <p>Garage (Yes:1/No:2):{{data_gar}}</p>
+      <p>Enter Location Ratio:{{data_locr}}</p>
+      <br>
+      <p>Predicted House Price:{{out}}</p>
+
+    <a  href="{% url 'ckdApp:ckd' %}">CKD Predicition</a>
+    <br>
+</div>
+{% endblock %}
